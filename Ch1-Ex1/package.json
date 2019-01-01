@@ -1,0 +1,20 @@
+{
+  "name": "ch1-ex1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-web": "browserify ./src/index.js -o dist/index.js -t [ babelify --presets [ env ] ]",
+    "build-cli": "browserify ./src/index.js --node -o dist/index.js -t [ babelify --presets [ env ] ]",
+    "start": "yarn build-cli && node dist/index.js"
+  },
+  "author": "Soen, Surya Soenaryo",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^15.1.0"
+  }
+}
